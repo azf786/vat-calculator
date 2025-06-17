@@ -3,6 +3,16 @@ package org.azfar.vatcalculator.ui;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+/**
+ * A simple console-based user interface for interacting with the user.
+ *
+ * This class provides methods for:
+ * - Prompting the user to input a gross amount (as BigDecimal)
+ * - Displaying messages to the console
+ *
+ * The user input is validated to ensure it is a non-negative decimal number.
+ * Invalid input results in an error message and a retry prompt.
+ */
 public class SimpleUI {
     private final Scanner scanner = new Scanner(System.in);
 

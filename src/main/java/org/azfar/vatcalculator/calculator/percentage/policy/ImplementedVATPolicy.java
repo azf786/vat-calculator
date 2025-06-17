@@ -6,10 +6,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/*
-    Note: This can be extended to load policies from DB and allow selection at runtime
+/**
+ * An implementation of VATPolicy that loads the VAT rate from a properties file at runtime.
+ *
+ * The VAT rate is read from a file named "vat.properties" located in the classpath.
+ * The expected property key is "vat.rate", and the value should be a valid decimal number (e.g., 0.19 for 19%).
+ *
+ * If the properties file is missing or the rate is invalid, a LoadException is thrown.
+ *
+ * Note: This implementation can be extended to support loading VAT policies from a database or
+ * to allow dynamic selection of different VAT policies at runtime.
  */
-
 public class ImplementedVATPolicy implements VATPolicy {
     private final double rate;
 
