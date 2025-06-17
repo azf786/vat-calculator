@@ -5,9 +5,11 @@ import org.azfar.vatcalculator.exceptions.LoadException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+
 public class CSVExporter implements Exporter{
     @Override
-    public void export(double vatAmount, String filename) {
+    public void export(BigDecimal vatAmount, String filename) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename, true)) ){
             writer.println(vatAmount);
         } catch (IOException e) {

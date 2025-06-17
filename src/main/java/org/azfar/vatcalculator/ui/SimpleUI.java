@@ -1,18 +1,20 @@
-package org.azfar.vatcalculator.UI;
+package org.azfar.vatcalculator.ui;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class SimpleUI {
     private final Scanner scanner = new Scanner(System.in);
 
-    public double askAmount() {
+    public BigDecimal askAmount() {
         System.out.print("Bitte geben Sie den Bruttobetrag ein: ");
+        String input = scanner.nextLine();
         try {
-            double amount = Double.parseDouble(scanner.nextLine().trim());
-            if (amount < 0) {
+            BigDecimal grossAmount = new BigDecimal(input.trim());
+            if (grossAmount.compareTo(BigDecimal.ZERO) < 0) {
                 throw new NumberFormatException("Negativer Betrag ist nicht erlaubt.");
             }
-            return amount;
+            return grossAmount;
         } catch (NumberFormatException e) {
             System.out.println("Ungültiger Betrag. Bitte geben Sie eine positive Zahl ein.");
             return askAmount(); // retry

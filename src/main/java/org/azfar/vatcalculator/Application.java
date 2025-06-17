@@ -1,8 +1,10 @@
 package org.azfar.vatcalculator;
 
-import org.azfar.vatcalculator.UI.SimpleUI;
+import org.azfar.vatcalculator.ui.SimpleUI;
 import org.azfar.vatcalculator.calculator.VATCalculator;
 import org.azfar.vatcalculator.exporter.Exporter;
+
+import java.math.BigDecimal;
 
 public class Application {
     private final SimpleUI ui = new SimpleUI();
@@ -16,8 +18,8 @@ public class Application {
 
     public void run() {
 
-        double grossAmount = ui.askAmount();
-        double vatAmount = calculator.calculateVAT(grossAmount);
+        BigDecimal grossAmount = ui.askAmount();
+        BigDecimal vatAmount = calculator.calculateVAT(grossAmount);
 
         exporter.export(vatAmount, "output.csv");
 

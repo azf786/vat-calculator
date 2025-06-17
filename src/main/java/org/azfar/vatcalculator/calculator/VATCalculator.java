@@ -1,5 +1,7 @@
 package org.azfar.vatcalculator.calculator;
 
+import java.math.BigDecimal;
+
 public interface VATCalculator {
-    double calculateVAT(double grossAmount);
+    BigDecimal calculateVAT(BigDecimal grossAmount);
 }
