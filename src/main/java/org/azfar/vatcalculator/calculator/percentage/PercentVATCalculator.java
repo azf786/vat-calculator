@@ -1,6 +1,9 @@
-package org.azfar.vatcalculator.calculator;
+package org.azfar.vatcalculator.calculator.percentage;
 
-public class PercentVATCalculator implements VATCalculator{
+import org.azfar.vatcalculator.calculator.VATCalculator;
+import org.azfar.vatcalculator.calculator.percentage.policy.VATPolicy;
+
+public class PercentVATCalculator implements VATCalculator {
     private final VATPolicy policy;
 
     public PercentVATCalculator(VATPolicy policy) {

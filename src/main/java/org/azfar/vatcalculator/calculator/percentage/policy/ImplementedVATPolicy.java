@@ -1,4 +1,4 @@
-package org.azfar.vatcalculator.calculator;
+package org.azfar.vatcalculator.calculator.percentage.policy;
 
 import org.azfar.vatcalculator.exceptions.LoadException;
 
@@ -10,7 +10,7 @@ import java.util.Properties;
     Note: This can be extended to load policies from DB and allow selection at runtime
  */
 
-public class ImplementedVATPolicy implements VATPolicy{
+public class ImplementedVATPolicy implements VATPolicy {
     private final double rate;
 
     public ImplementedVATPolicy() {

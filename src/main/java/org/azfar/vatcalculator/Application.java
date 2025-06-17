@@ -2,7 +2,6 @@ package org.azfar.vatcalculator;
 
 import org.azfar.vatcalculator.UI.SimpleUI;
 import org.azfar.vatcalculator.calculator.VATCalculator;
-import org.azfar.vatcalculator.calculator.VATPolicy;
 import org.azfar.vatcalculator.exporter.Exporter;
 
 public class Application {

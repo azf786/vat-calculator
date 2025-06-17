@@ -1,9 +1,9 @@
 package org.azfar.vatcalculator;
 
-import org.azfar.vatcalculator.calculator.ImplementedVATPolicy;
-import org.azfar.vatcalculator.calculator.PercentVATCalculator;
+import org.azfar.vatcalculator.calculator.percentage.policy.ImplementedVATPolicy;
+import org.azfar.vatcalculator.calculator.percentage.PercentVATCalculator;
 import org.azfar.vatcalculator.calculator.VATCalculator;
-import org.azfar.vatcalculator.calculator.VATPolicy;
+import org.azfar.vatcalculator.calculator.percentage.policy.VATPolicy;
 import org.azfar.vatcalculator.exporter.CSVExporter;
 import org.azfar.vatcalculator.exporter.Exporter;
 
